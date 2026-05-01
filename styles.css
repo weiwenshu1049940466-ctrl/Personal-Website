@@ -271,14 +271,13 @@ main {
 }
 
 .avatar-placeholder {
-  display: grid;
-  place-items: center;
+  display: block;
   min-height: 320px;
-  padding: 1.5rem;
-  text-align: center;
+  padding: 0;
   border-radius: calc(var(--radius-xl) - 8px);
   border: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.45);
+  overflow: hidden;
   box-shadow: none;
   filter: none;
   transition: none;
@@ -291,25 +290,13 @@ main {
   transform: none;
 }
 
-.avatar-placeholder span {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 132px;
-  height: 132px;
-  margin-bottom: 1rem;
-  border-radius: 50%;
-  font-size: 2rem;
-  color: var(--accent-deep);
-  background: rgba(255, 250, 242, 0.88);
-  border: 1px solid var(--line);
-}
-
-.avatar-placeholder p {
-  max-width: 18rem;
-  margin: 0;
-  color: var(--muted);
-  line-height: 1.7;
+.avatar-placeholder img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  object-fit: cover;
+  object-position: center top;
 }
 
 .status-list {
